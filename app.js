@@ -75,14 +75,14 @@ function deleteNote(index)
 
 let search=document.getElementById("searchTxt");
 search.addEventListener("input",function(){
-    let text=search.value.toLowerCase();
-    console.log(text);
+    let keyword=search.value.toLowerCase();
+//     console.log(text);
     let cardNotes=document.getElementsByClassName("noteCard");
     Array.from(cardNotes).forEach(function(element)
     {
         let cardNote=element.getElementsByTagName("p")[0].innerText;
-         console.log(typeof cardNote);
-        if(cardNote.includes(text))
+//          console.log(typeof cardNote);
+        if(cardNote.includes(keyword))
         {
             element.style.display="block";
         }
